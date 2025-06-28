@@ -1,0 +1,149 @@
+---
+title: Project Structure
+description: This section provides an overview of Project Structure.
+---
+# 📁 SmartChain ERP Project Structure  
+
+This document outlines the structure of the **SmartChain ERP** project, designed for modularity, scalability, and ease of maintenance.  
+
+---
+
+## 🗂 Project Structure  
+
+### **1. Core Modules**  
+These are the primary functionalities that drive the platform.  
+
+- **Authentication & Authorization**  
+  - User registration, login, and role-based access control.  
+  - Two-factor authentication and OAuth integration.  
+
+- **ERP Core**  
+  - Ledger management, financial reporting, and expense tracking.  
+  - Integration with GST-compliant invoicing.  
+
+- **Supply Chain Management (SCM)**  
+  - Real-time inventory tracking using IoT.  
+  - Automated stock replenishment and demand forecasting.  
+
+- **AI-Powered Automation**  
+  - Predictive analytics for supply and demand management.  
+  - Workflow customization for enhanced efficiency.  
+
+- **Blockchain Module**  
+  - Immutable transaction logging for supply chain traceability.  
+  - Smart contracts for secure vendor agreements.  
+
+- **ESG Analytics**  
+  - Carbon footprint tracking and reporting.  
+  - Metrics for social and governance compliance.  
+
+---
+
+### **2. Frontend**  
+The user-facing component for interaction with the platform.  
+
+- **Technology Stack**: React.js, TypeScript  
+- **Components**:  
+  - Dashboard: Displays key analytics and performance metrics.  
+  - Forms: For data entry, such as invoices, inventory updates, etc.  
+  - Reports: Visualize financial, SCM, and ESG data.  
+
+---
+
+### **3. Backend**  
+The server-side logic and APIs for handling requests and storing data.  
+
+- **Technology Stack**: Node.js, Express.js  
+- **Key Functionalities**:  
+  - RESTful APIs for CRUD operations.  
+  - AI services for predictive analytics.  
+  - Blockchain integration for supply chain logs.  
+  - ESG data processing.  
+
+---
+
+### **4. Database**  
+The storage layer for maintaining structured and unstructured data.  
+
+- **Technology**: PostgreSQL (Relational Database), MongoDB (NoSQL for IoT data).  
+- **Schema**:  
+  - Users: Roles, permissions, and profiles.  
+  - Transactions: Financial records and GST data.  
+  - Inventory: Stock levels, reorder points, and vendor data.  
+  - Blockchain Logs: Immutable records for supply chain transparency.  
+
+---
+
+### **5. AI & Analytics**  
+The intelligence layer for the platform.  
+
+- **Components**:  
+  - Predictive Models: For inventory optimization.  
+  - Reporting Dashboards: Generate actionable insights.  
+  - Workflow Customization: Adaptive system behavior based on user activity.  
+
+---
+
+### **6. DevOps**  
+Ensures smooth deployment, scaling, and maintenance.  
+
+- **Tools**:  
+  - Docker: Containerization for isolated environments.  
+  - Kubernetes: Orchestration for scalability.  
+  - CI/CD: Automates testing and deployment pipelines.  
+
+---
+
+### **7. Documentation**  
+Provides resources for understanding and contributing to the project.  
+
+- **Subfolders**:  
+  - API Docs: REST API reference and usage guidelines.  
+  - User Manual: Step-by-step guide for end users.  
+  - Developer Guide: Instructions for contributors.  
+
+---
+
+### **8. Testing**  
+Ensures the platform is reliable and bug-free.  
+
+- **Types of Testing**:  
+  - Unit Tests: Verifies individual modules.  
+  - Integration Tests: Ensures modules work together.  
+  - Performance Tests: Assesses scalability under load.  
+
+- **Tools**: Jest, Mocha, Postman for API testing.  
+
+---
+
+### **9. Deployment**  
+The process of making the platform available for use.  
+
+- **Environments**:  
+  - Development: Local environment for developers.  
+  - Staging: Pre-production environment for testing.  
+  - Production: Live platform for end-users.  
+
+- **Cloud Provider**: AWS or Google Cloud for hosting services.  
+
+---
+
+## 🛠 Development Workflow  
+
+1. **Plan**: Define features and milestones using Agile methodology.  
+2. **Develop**: Build features and modules in isolated branches.  
+3. **Test**: Execute unit, integration, and performance tests.  
+4. **Deploy**: Merge changes to the main branch and push to production.  
+
+---
+
+## 🌟 Contribute  
+
+We welcome contributions to make **SmartChain ERP** even better!  
+1. Fork the repository.  
+2. Create a feature branch.  
+3. Submit a pull request with your changes.  
+
+---
+
+Ready to transform how SMEs manage their operations? Dive into **SmartChain ERP** today!  
