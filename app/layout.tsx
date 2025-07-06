@@ -21,10 +21,10 @@ const monoFont = Space_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "High Level System Design",
+  title: "Vendor ERP - Modern Enterprise Management Platform",
   
   description:
-    "Starting something new!",
+    "Transform your business with Vendor ERP - AI-powered enterprise management platform featuring blockchain security, IoT integration, and predictive analytics.",
 };
 
 export default function RootLayout({
