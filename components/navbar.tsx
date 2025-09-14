@@ -1,3 +1,5 @@
+"use client";
+
 import { ModeToggle } from "@/components/theme-toggle";
 import { GithubIcon, TwitterIcon, CommandIcon } from "lucide-react";
 import Link from "next/link";
@@ -79,16 +81,31 @@ export function Logo() {
   return (
     <Link href="/" className="flex items-center gap-2.5">
       <CommandIcon className="w-6 h-6 text-muted-foreground" strokeWidth={2} />
-      <h2 className="text-md font-bold font-code">Vendor ERP</h2>
+      <h2 className="text-md font-bold font-code">CFN</h2>
     </Link>
   );
 }
 
 export function NavMenu({ isSheet = false }) {
+  const handleLockedClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    alert("Access denied. This page is currently locked and not available.");
+  };
+
   return (
     <>
       {NAVLINKS.map((item) => {
-        const Comp = (
+        const isLocked = item.title !== "Documentation"; // Only allow Documentation
+        
+        const Comp = isLocked ? (
+          <button
+            key={item.title + item.href}
+            onClick={handleLockedClick}
+            className="flex items-center gap-1 dark:text-stone-300/85 text-stone-800 opacity-50 cursor-not-allowed"
+          >
+            {item.title} 🔒
+          </button>
+        ) : (
           <Anchor
             key={item.title + item.href}
             activeClassName="!text-primary dark:font-medium font-semibold"
@@ -99,6 +116,7 @@ export function NavMenu({ isSheet = false }) {
             {item.title}
           </Anchor>
         );
+        
         return isSheet ? (
           <SheetClose key={item.title + item.href} asChild>
             {Comp}
