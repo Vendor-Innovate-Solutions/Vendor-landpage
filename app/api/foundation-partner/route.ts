@@ -5,6 +5,12 @@ export async function POST(request: NextRequest) {
   try {
     const { name, company, title, challenge } = await request.json();
 
+    // Get Gmail app password from Vercel environment variable
+    const gmailPass = process.env.gmail_pass;
+    if (!gmailPass) {
+      throw new Error('Gmail app password is not configured in environment variables.');
+    }
+
     // Create transporter using your Gmail configuration
     const transporter = nodemailer.createTransport({
       host: 'smtp.gmail.com',
@@ -12,7 +18,7 @@ export async function POST(request: NextRequest) {
       secure: false, // true for 465, false for other ports
       auth: {
         user: 'venkatesh.k21062005@gmail.com',
-        pass: 'ywqc fghh kgdv kaqe', // Your app password
+        pass: gmailPass, // Use environment variable
       },
     });
 
